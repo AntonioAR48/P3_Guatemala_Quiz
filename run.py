@@ -1,3 +1,5 @@
+import random
+
 questions = [
 {
    "prompt": "What is the meaning of the word Guatemala?",
@@ -34,6 +36,7 @@ questions = [
 def run_game(questions):
     score = 0
     options = ("A, B, C, D")
+    random.shuffle(questions)
     for question in questions:
         print(question["prompt"])
         for option in question["options"]:
