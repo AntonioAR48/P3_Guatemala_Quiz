@@ -52,8 +52,11 @@ def run_game(questions):
             print("Incorrect! The correct answer is", question["answer"], "\n")
 
     print(f"You got {score} out of {len(questions)} correct answers.")
-
-
-
+    
 run_game(questions)
-      
+    
+again = str(input("Do you want to play again (type yes or no): "))
+if again == "yes":
+    run_game(questions)
+else:
+    print("Goodbye")
