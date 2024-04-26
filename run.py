@@ -33,15 +33,19 @@ questions = [
 
 def run_game(questions):
     score = 0
+    options = ("A, B, C, D")
     for question in questions:
         print(question["prompt"])
         for option in question["options"]:
             print(option) 
         answer = input("Select your answer (A, B, C, D): ").upper()
-        if answer == question["answer"]:
+        if answer in options:
+           if answer == question["answer"]:
             print("That is correct!!!\n")
             score += 1
         else:
+            print("Selection not an option. Please select between A, B, C or D")
+            continue  # go to top of loop
             print("Incorrect! The correct answer is", question["answer"], "\n")
 
     print(f"You got {score} out of {len(questions)} correct answers.")
