@@ -16,7 +16,7 @@ questions = [
 },
 {
    "prompt": "What is the name of Guatemala's president?",
-   "options": ["A.  Juan José Arévalo", "B.  Bernardo Arévalo ", "C.  Alejandro Giammattei", "D. Alejandro Maldonado"],
+   "options": ["A. Juan José Arévalo", "B. Bernardo Arévalo ", "C. Alejandro Giammattei", "D. Alejandro Maldonado"],
    "answer": "B"
 },
 {
@@ -26,8 +26,17 @@ questions = [
 },
 {
    "prompt": "How many states does Guatemala have?",
-   "options": ["A. 22", "B. 23", "C.  24", "D. 25"],
+   "options": ["A. 22", "B. 23", "C. 24", "D. 25"],
    "answer": "A"
 },
 ]
 
+def run_game(questions):
+    score = 0
+    for question in questions:
+        print(question["prompt"])
+        for option in question["options"]:
+            print(option) 
+
+run_game(questions)
+      
